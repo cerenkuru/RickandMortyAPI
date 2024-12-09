@@ -6,7 +6,6 @@ Bu proje, **Rick & Morty** dizisinin karakter bilgilerini ve sayfalama özellikl
 
 Projeyi çalıştırmadan önce gerekli bağımlılıkları yüklemeniz gerekir. Aşağıdaki komut satırlarını sırasıyla çalıştırmalısınız. 
 
-+ npm install bootstrap
 + npm install react-router-dom
 + npm install react-paginate --save
 + npm install bootstrap
