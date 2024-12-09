@@ -1,0 +1,90 @@
+/* Pagination butonları için başlangıç renkleri */
+.page-item {
+  margin: 0 5px;
+}
+
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* Pagination butonlarının focus durumunda renk değişimi */
+.page-link:focus {
+  --bs-pagination-focus-color: #ACD652;
+  --bs-pagination-focus-bg: black;
+  --bs-pagination-color: #ACD652;
+  outline: none;
+  box-shadow: 0 0 0 0.25rem rgba(172, 213, 82, 0.5);
+}
+
+/* "Previous" ve "Next" yazılarının renkleri */
+a {
+  color: #ACD652;
+  text-decoration: none;
+}
+
+/* Aktif sayfa butonunun arka planı siyah, yazı rengi yeşil olacak */
+.page-item.active .page-link {
+  background-color: black;
+  color: #ACD652;
+  border: none;
+}
+
+/* Sayfa linklerinin hover durumu */
+.page-link:hover {
+  background-color: black;
+  color: #ACD652;
+}
+
+/* Sayfa linklerinin başlangıç durumu */
+.page-link {
+  background-color: #ACD652;
+  color: black;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  text-decoration: none;
+}
+
+/* "Next" ve "Prev" butonları için stil */
+.prev, .next {
+  background-color: #ACD652;
+  color: black;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.3s, color 0.3s;
+  text-decoration: none;
+}
+
+/* "Next" ve "Prev" butonlarının hover durumu */
+.prev:hover, .next:hover {
+  background-color: black;
+  color: #ACD652;
+}
+
+/* "Prev" butonunun başlangıç rengi */
+.prev {
+  background-color: black;
+}
+
+/* "Next" butonunun başlangıç rengi */
+.next {
+  background-color: black;
+}
+
+/* Mobilde "next" ve "prev" butonlarını gizlemek */
+@media (max-width: 768px) {
+  .next,
+  .prev {
+    display: none;
+  }
+}
+
+/* Mobilde daha küçük font boyutu */
+@media (max-width: 576px) {
+  .page-link {
+    font-size: 12px;
+  }
+}

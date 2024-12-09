@@ -1,0 +1,120 @@
+/* Genel Sayfa Tasarımı */
+body {
+  background-color: #ebf3a3;
+}
+
+/* Google Fonts - Bangers Fontu */
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+
+/* Başlık Tasarımı */
+h1 {
+  font-family: "Bangers", sans-serif;
+  font-size: 4rem;
+  color: #00b5e2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-left: 150px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-shadow: 
+    0 0.1em 8px rgba(0, 0, 0, 1), 
+    0.03em -0.02em 0 rgba(0, 0, 0, 1),
+    0.03em 0.005em 0 rgba(0, 0, 0, 1), 
+    0em 0.04em 0 rgba(0, 0, 0, 1),
+    0.03em 0.04em 0 rgba(0, 0, 0, 1), 
+    0px -0.02em 0 rgba(0, 0, 0, 1),
+    -0.02em -0.02em 0 rgba(0, 0, 0, 1), 
+    -0.02em 0.04em 0 rgba(0, 0, 0, 1),
+    -0.02em 0 0 rgba(0, 0, 0, 1);
+}
+
+/* Accordion Button İkonlarını Gizleme */
+.accordion-button::after {
+  display: none;
+}
+
+/* Loading (Yükleniyor) Konteyneri */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Loading Yazısı */
+.loading-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #01b5e1;
+  text-transform: uppercase;
+  animation: fadeInOut 1.5s infinite;
+  margin-top: 50px;
+  margin-left: 120px;
+}
+
+/* Fade In ve Fade Out Animasyonu */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Fade In Animasyonu */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Fade Out Animasyonu */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Hata Mesajları Animasyonu */
+.alert-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.alert-fade-out {
+  animation: fadeOut 0.5s ease-in;
+}
+
+.alert {
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* No Characters Found Mesajı */
+.no-characters-found {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Mobil uyumlu başlık */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+    margin-left: 0;        
+    text-align: center;    
+  }
+}
+
+@media (max-width: 576px) { 
+  h1 {
+    font-size: 3rem;
+    margin-left: 0;        
+    text-align: center;    
+  }
+}

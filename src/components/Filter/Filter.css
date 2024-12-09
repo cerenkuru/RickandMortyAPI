@@ -1,0 +1,188 @@
+
+/* Başlıklar */
+.filter-container h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #000000;  /* Koyu gri başlık rengi */
+  font-weight: 600;
+  text-align: center;
+}
+
+
+.clear-filters {
+  background-color: black;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 16px;
+  font-size: 15px;
+  color: #ACD652; 
+  border-radius: 5px; /* Yuvarlak tasarım */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Geçiş efekti */
+}
+
+.clear-filters:hover {
+  background-color: #A7C33D; 
+  color: black;
+}
+
+
+/* Butonlar için genel stil */
+.filter-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  border: 1px solid #ced4da; /* Gri sınır */
+  transition: all 0.3s ease;
+}
+
+/* Buton Hover Durumu */
+.filter-button:hover {
+  background-color: black; /* Hover sırasında hafif gri arka plan */
+  color: #ACD652;
+}
+
+/* Aktif Buton Durumu */
+.filter-button.active {
+  background-color: black;
+  color: #ACD652;
+  border-color: black;
+}
+
+/* Butonlar için odak (focus) durumu */
+.filter-button:focus {
+  outline: none;
+}
+
+@media (max-width: 768px) {
+    .filter-container {
+      width: 200px;       /* Mobilde filtreleme paneli daha küçük olur */
+      box-shadow: none;
+      padding: 10px;      /* Mobilde biraz daha küçük padding */
+    }
+  }
+
+
+  /* Filter Container */
+.filter-container {
+    position: fixed;  /* Filtreyi sabit tutar */
+    top: 0;           /* Sayfanın üst kısmına yapışık */
+    left: 0;           /* Sayfanın sol tarafına yasla */
+    background-color: #01B5E1;  /* Açık gri arka plan */
+    padding: 20px;
+    box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.1);  /* Sağ kenarda hafif bir gölge */
+    height: 100vh;  /* Tam sayfa yüksekliği */
+    width: 250px;     /* Sabit genişlik */
+    overflow-y: auto; /* İçeriğin taşması durumunda scroll ekler */
+    z-index: 100; /* Diğer öğelerin üstünde */
+    margin-right: 30px; /* Filter component'ı ile içerik arasına 30px boşluk */
+  }
+  
+  /* Dropdown menü için arka plan ve genel stiller */
+.form-select {
+  background-color: #ABD652; /* Arka plan rengi */
+  color: black; /* Varsayılan metin rengi */
+  border-radius: 4px; /* Kenar yuvarlama */
+  padding: 5px 10px; /* İç boşluk */
+  font-size: 16px; /* Yazı boyutu */
+  appearance: none; /* Varsayılan oku kaldır */
+  cursor: pointer; /* İşaretçi */
+}
+
+/* Dropdown menü öğeleri için */
+.form-select option {
+  background-color: #ABD652; /* Seçeneklerin arka plan rengi */
+  color: black; /* Seçeneklerin yazı rengi */
+  font-size: 14px; /* Yazı boyutu */
+  font-weight: bold; /* Yazı kalınlığı */
+}
+
+/* Hover efekti */
+.form-select:hover {
+  background-color: #C9E880; /* Hover sırasında değişen renk */
+}
+
+/* Mobil cihazlar için 768px ve daha küçük cihazlar */
+@media (max-width: 768px) {
+  .filter-container {
+    display: flex;             /* Flexbox ile hizalama */
+    flex-direction: column;    /* İçerikler dikey hizalanır */
+    align-items: center;       /* Yatayda merkezler */
+    justify-content: center;   /* Dikeyde merkezler */
+    position: relative;        /* Sabit pozisyondan çıkarılır */
+    width: 90%;                /* Genişlik ekranın %90'ı kadar */
+    height: auto;              /* İçerik yüksekliği dinamik olur */
+    margin: 0 auto;            /* Yatayda tam ortalar */
+    padding: 15px;             /* İç boşluklar */
+    border-radius: 10px;       /* Köşeler yuvarlatılır */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    background-color: #01B5E1; /* Belirttiğiniz arka plan rengi */
+  }
+
+  .filter {
+    display: flex;
+    flex-direction: column;    /* İçerik dikey hizalanır */
+    gap: 10px;                 /* Elemanlar arasına boşluk eklenir */
+    width: 100%;               /* İçerik genişliği tam olur */
+    align-items: center;       /* İçerik ortalanır */
+  }
+
+  .filter-button {
+    width: 100%;               /* Buton genişliği %100 olur */
+    font-size: 14px;           /* Yazı boyutu */
+    padding: 10px;             /* İç boşluklar */
+    text-align: center;        /* Yazılar ortalanır */
+    border-radius: 5px;        /* Köşeler yuvarlatılır */
+    border: 1px solid #ced4da; /* Gri sınır */
+    transition: all 0.3s ease; /* Geçiş efekti */
+  }
+
+  .clear-filters {
+    width: 100%;               /* Genişlik tam ekran uyumlu */
+    font-size: 15px;           /* Yazı boyutu */
+    padding: 10px;             /* İç boşluk */
+    margin-top: 16px;          /* Yukarıdan boşluk */
+    background-color: black;   /* Arka plan rengi */
+    color: #ACD652;            /* Yazı rengi */
+    border-radius: 5px;        /* Köşeler yuvarlatılır */
+    border: none;              /* Çerçeve kaldırılır */
+    text-align: center;        /* Yazılar ortalanır */
+    cursor: pointer;
+  }
+
+  .form-select {
+    width: 100%;               /* Dropdown genişliği tam ekran olur */
+    font-size: 14px;           /* Yazı boyutu */
+    padding: 8px;              /* İç boşluk */
+    border-radius: 5px;        /* Köşeler yuvarlatılır */
+    background-color: #ABD652; /* Arka plan rengi */
+    color: black;              /* Yazı rengi */
+  }
+}
+
+/* Daha küçük mobil cihazlar (576px altı) için */
+@media (max-width: 576px) {
+  .filter-container {
+    display: flex;             /* Flexbox ile hizalama */
+    flex-direction: column;    /* Dikey hizalama */
+    align-items: center;       /* Yatayda merkezleme */
+    justify-content: center;   /* Dikeyde merkezleme */
+    width: 95%;                /* Genişlik ekranın %95'i */
+    height: auto;              /* İçerik yüksekliği dinamik */
+    margin: 20px auto;         /* Yukarı-aşağı ve yatayda merkezleme */
+    padding: 20px;             /* İç boşluklar */
+    background-color: #01B5E1; /* Arka plan rengi */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15); /* Hafif gölge */
+    border-radius: 10px;       /* Köşeler yuvarlatılır */
+  }
+
+  .filter {
+    gap: 8px;                  /* Elemanlar arası boşluk */
+  }
+
+  .filter-button, .clear-filters, .form-select {
+    width: 100%;               /* Genişlik tam ekran */
+  }
+}
